@@ -34,8 +34,8 @@ func (h *Handler) Init() http.Handler {
 }
 
 func (h *Handler) InitApi(router *chi.Mux) {
+	h.initAuthGroup(router)
 	h.initUserGroup(router)
 	h.initBookGroup(router)
 	h.initBookingGroup(router)
-
 }
